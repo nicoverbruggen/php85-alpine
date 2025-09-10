@@ -15,7 +15,7 @@ This image includes:
 - The latest version of Composer (at the time of the build) also comes pre-installed in `/usr/local/bin/composer`.
 
 
-For the latest list of inclusion, see the [Dockerfile](./Dockerfile).
+For the latest list of inclusions, see the [Dockerfile](./Dockerfile).
 
 ## Quick start
 
@@ -49,13 +49,10 @@ The Docker action will automatically build the release and push it under that ta
 `/.github/workflows/run-tests.yml`
 ```
 name: Test Suite
-
 on:
   push:
     branches:
       - main
-      - ci
-
 jobs:
   test-suite:
     runs-on: ubuntu-latest
