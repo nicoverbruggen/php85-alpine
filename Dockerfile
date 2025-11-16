@@ -1,3 +1,4 @@
+# Last updated: Nov 16, 2025
 ARG BASE_IMAGE="php:8.5-rc-alpine"
 
 FROM ${BASE_IMAGE} as builder
