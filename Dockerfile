@@ -1,5 +1,5 @@
-# Last updated: Nov 16, 2025
-ARG BASE_IMAGE="php:8.5-rc-alpine"
+# Last updated: Nov 24, 2025
+ARG BASE_IMAGE="php:8.5-alpine"
 
 FROM ${BASE_IMAGE} as builder
 

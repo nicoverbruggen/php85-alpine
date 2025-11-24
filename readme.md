@@ -1,7 +1,7 @@
 # php85-alpine
 
 > [!IMPORTANT]  
-> **PHP 8.5 has not been released yet, so some functionality may be missing due to pending compatibility issues. Currently `imagick` and `xdebug` are not included. For testing purposes only.** 
+> **Currently `imagick` and `xdebug` are not included as they are not compatible with PHP 8.5 yet.** 
  
 ## What is this?
 
@@ -23,7 +23,7 @@ For the latest list of inclusions, see the [Dockerfile](./Dockerfile).
 
 In order to build and then test the container:
 
-    docker buildx build . --platform linux/amd64 -t nicoverbruggen/php84-alpine \
+    docker buildx build . --platform linux/amd64 -t nicoverbruggen/php85-alpine \
     && docker run -it nicoverbruggen/php85-alpine sh
 
 You may omit the `--platform` flag if you wish to build a container for your own architecture, but there may be issues with dependencies.
