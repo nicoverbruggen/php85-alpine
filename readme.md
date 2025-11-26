@@ -1,7 +1,4 @@
 # php85-alpine
-
-> [!IMPORTANT]  
-> **Currently `imagick` and `xdebug` are not included as they are not compatible with PHP 8.5 yet.** 
  
 ## What is this?
 
@@ -11,9 +8,9 @@ This image includes:
 
 - PHP 8.5 with `bcmath`, `exif`, `gd`, `intl`, `mysqli`, `pcntl`, `pdo_mysql`, `pdo_pgsql`, `pgsql`, `sodium`, `zip`, `xdebug`, and `imagick` installed.
 - Packages: `curl`, `git`, `sqlite`, `nano`, `ncdu`, `nodejs`, `npm`, `openssh-client`.
-- `opcache` now ships with PHP by default, it is no longer a separate extension.
+- `opcache` now ships with PHP by default, so it is no longer installed as a separate extension.
 - The latest version of Composer (at the time of the build) also comes pre-installed in `/usr/local/bin/composer`.
-
+- The latest version of PIE (at the time of the build) also comes pre-installed in `/usr/local/bin/pie`.
 
 For the latest list of inclusions, see the [Dockerfile](./Dockerfile).
 
@@ -70,6 +67,7 @@ jobs:
       - name: Install Dependencies
         run: |
           composer install
+          pie install
           npm install --silent
           npm run production
 
@@ -91,6 +89,7 @@ tests:
     - cp .env.ci .env
     - cp .env.ci .env.testing
     - composer install
+    - pie install
     - npm install --silent
     - npm run production
     - touch ./database/tests.sqlite
