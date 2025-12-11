@@ -18,10 +18,10 @@ RUN curl -L https://github.com/php/pie/releases/latest/download/pie.phar -o /usr
     chmod +x /usr/local/bin/pie
 
 # Install imagick extension from specific tag using PIE
-RUN pie install imagick/imagick:dev-master;
+RUN pie install imagick/imagick;
 
 # Install xdebug extension from master branch using PIE
-RUN pie install xdebug/xdebug:dev-master; \
+RUN pie install xdebug/xdebug; \
     echo "xdebug.mode=coverage" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini;
 
 # Clean up build dependencies
