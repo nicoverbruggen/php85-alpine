@@ -1,4 +1,4 @@
-ARG BASE_IMAGE="php:8.5-alpine"
+ARG BASE_IMAGE="php:8.5.1-alpine"
 
 FROM ${BASE_IMAGE} as builder
 
