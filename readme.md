@@ -6,7 +6,7 @@ This is a custom build based on PHP 8.5's Alpine docker image, with changes to m
 
 This image includes:
 
-- PHP 8.5 with `bcmath`, `exif`, `gd`, `intl`, `mysqli`, `pcntl`, `pdo_mysql`, `pdo_pgsql`, `pgsql`, `sodium`, `zip`, `xdebug`, and `imagick` installed.
+- PHP 8.5 with `bcmath`, `exif`, `gd`, `intl`, `mysqli`, `pcntl`, `pdo_mysql`, `pdo_pgsql`, `pgsql`, `sodium`, `zip`, `redis`, `xdebug`, and `imagick` installed.
 - Packages: `curl`, `git`, `sqlite`, `nano`, `ncdu`, `nodejs`, `npm`, `openssh-client`.
 - `opcache` now ships with PHP by default, so it is no longer installed as a separate extension.
 - The latest version of Composer (at the time of the build) also comes pre-installed in `/usr/local/bin/composer`.

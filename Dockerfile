@@ -8,7 +8,7 @@ RUN apk add --no-cache $PHPIZE_DEPS \
 
 # Configure and install PHP extensions
 RUN docker-php-ext-configure gd --with-jpeg
-RUN docker-php-ext-install bcmath pdo mysqli pdo_mysql pdo_pgsql pgsql intl pcntl gd exif zip
+RUN docker-php-ext-install bcmath pdo mysqli pdo_mysql pdo_pgsql pgsql intl pcntl gd exif zip redis
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
